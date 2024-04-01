@@ -1,0 +1,20 @@
+<div class="container">
+    <table datatable [dtOptions]="dtoptions" class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of data">
+                <th scope="row">{{person.id}}</th>
+                <td>{{person.employee_name}}</td>
+                <td>{{person.employee_salary | number}}</td>
+                <td>{{person.employee_age}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
